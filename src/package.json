@@ -15,5 +15,12 @@
   "bugs": {
     "url": "https://github.com/lmelvin/ng6-combobox/issues"
   },
-  "homepage": "https://github.com/lmelvin/ng6-combobox#readme"
+  "homepage": "https://github.com/lmelvin/ng6-combobox#readme",
+  "ngPackage": {
+    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+    "lib": {
+      "entryFile": "index.ts"
+    },
+    "dest": "../dist/npm"
+  }
 }
