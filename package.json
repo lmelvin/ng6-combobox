@@ -1,10 +1,18 @@
 {
   "name": "ng6-combobox",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "A simple combobox component built on Angular 6 and Bootstrap 4",
+  "author": "https://github.com/lmelvin",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmelvin/ng6-combobox.git"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start-demo": "ng serve demo",
     "build": "ng build",
+    "build-demo": "ng build demo",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -32,6 +40,7 @@
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
+    "bootstrap": "^4.1.3",
     "codelyzer": "~4.3.0",
     "jasmine-core": "~2.99.1",
     "jasmine-spec-reporter": "~4.2.1",

@@ -1,0 +1,19 @@
+{
+  "name": "@ng6-combobox/ng6-combobox",
+  "version": "1.0.0",
+  "description": "A simple combobox component built on Angular 6 and Bootstrap 4",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lmelvin/ng6-combobox.git"
+  },
+  "author": "https://github.com/lmelvin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lmelvin/ng6-combobox/issues"
+  },
+  "homepage": "https://github.com/lmelvin/ng6-combobox#readme"
+}

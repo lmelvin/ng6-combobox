@@ -1,0 +1,27 @@
+<div class="combo-container">
+  <div class="input-group input-group-sm">
+    <input type="text"
+           class="form-control form-control-sm"
+           [value]="value"
+           (input)="onTextChange($event.target.value)"
+           (keyup)="onKeyUp($event)"
+           (blur)="onBlur()"/>
+    <div class="input-group-append">
+      <button class="btn btn-outline-secondary"
+              type="button"
+              (click)="toggleDropDown()">
+        <i *ngIf="buttonClass; else defaultCharacter" [class]="buttonClass"></i>
+        <ng-template #defaultCharacter><span class="default-character">▼</span></ng-template>
+      </button>
+    </div>
+  </div>
+  <div class="data-container" *ngIf="showDropDown">
+    <p *ngFor="let data of dataList;
+               let i = index"
+       class="data-item"
+       (click)="valueSelected(data[propertyName], i)"
+       [ngClass]="{highlight:checkHighlight(i)}">
+      {{data[propertyName]}}
+    </p>
+  </div>
+</div>
