@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import { ReactiveFormsModule } from "@angular/forms";
 
-import { Ng6Module } from '../../../../src/index';
+import { Ng6Module } from 'ng6-combobox';
 
 import { AppComponent } from './app.component';
 import { ComboBoxComponent } from './components/combobox/combobox.component';
