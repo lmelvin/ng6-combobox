@@ -1,6 +1,6 @@
 {
   "name": "ng6-combobox",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A simple combobox component built on Angular 6 and Bootstrap 4",
   "main": "karma.conf.js",
   "scripts": {
