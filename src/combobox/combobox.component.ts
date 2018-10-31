@@ -36,8 +36,7 @@ export class Ng6ComboBoxComponent implements ControlValueAccessor {
   }
   registerOnChange(fn: (_: any) => {}): void { this.onChange = fn; }
   registerOnTouched(fn: () => {}): void { this.onTouched = fn; }
-  setDisabledState(isDisabled: boolean): void {
-  }
+  setDisabledState(isDisabled: boolean): void { }
 
   // member methods
   setValue(val: any): void {
@@ -70,7 +69,7 @@ export class Ng6ComboBoxComponent implements ControlValueAccessor {
     this.showDropDown = false;
   }
 
-  onKeyUp(event: any): void {
+  onKeyUp(event: KeyboardEvent): void {
     if (event.keyCode === KEY_CODE.DOWN_ARROW) {
       this.selectedIndex = this.selectedIndex === this.dataList.length - 1 ? this.selectedIndex : ++this.selectedIndex;
       this.setValue(this.dataList[this.selectedIndex][this.propertyName.toString()]);
