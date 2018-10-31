@@ -46,7 +46,6 @@ describe("Ng6ComboBoxComponent DOM", () => {
   });
 });
 
-
 describe('Ng6ComboBoxComponent', () => {
   let component: Ng6ComboBoxComponent;
   let fixture: ComponentFixture<Ng6ComboBoxComponent>;
@@ -63,19 +62,19 @@ describe('Ng6ComboBoxComponent', () => {
     expect(component).toBeDefined();
   });
 
-  it('#setValue() should set #value',
+  it('should set #value when calling #setValue()',
     async(() => {
       const val = "foo";
       component.setValue(val);
       expect(component.value).toBe(val);
     }));
 
-  it('dropdown should be hidden by default',
+  it('should set #showDropDown to false by default',
     async(() => {
       expect(component.showDropDown).toBeFalsy();
     }));
 
-  it('#toggle() should change dropdown visibility state',
+  it('should change dropdown visibility state when calling #toggle()',
     async(() => {
       component.toggleDropDown();
       expect(component.showDropDown).toBeTruthy();
@@ -84,7 +83,7 @@ describe('Ng6ComboBoxComponent', () => {
       expect(component.showDropDown).toBeFalsy();
     }));
 
-  it('#valueSelected() should hide dropdown and set #value',
+  it('should hide dropdown and set #value when calling #valueSelected()',
     async(() => {
       const val = "foo";
       component.valueSelected(val, 1);
@@ -92,7 +91,7 @@ describe('Ng6ComboBoxComponent', () => {
       expect(component.value).toBe(val);
     }));
 
-  it('#onTextChange() should show dropdown and set #value',
+  it('should show dropdown and set #value when calling #onTextChange()',
     async(() => {
       const val = "foo";
       component.onTextChange(val);
@@ -100,7 +99,7 @@ describe('Ng6ComboBoxComponent', () => {
       expect(component.value).toBe(val);
     }));
 
-  it('#onBlur() should hide dropdown',
+  it('should hide dropdown when calling #onBlur()',
     async(() => {
       component.onBlur();
       expect(component.showDropDown).toBeFalsy();
