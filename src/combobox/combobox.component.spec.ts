@@ -56,6 +56,10 @@ describe('Ng6ComboBoxComponent', () => {
     });
     fixture = TestBed.createComponent(Ng6ComboBoxComponent);
     component = fixture.componentInstance;
+    component.dataList = [
+      { name: "John" }, { name: "Sally" }, { name: "Frank" }
+    ];
+    component.propertyName = "name";
   });
 
   it('should create', () => {
@@ -103,5 +107,16 @@ describe('Ng6ComboBoxComponent', () => {
     async(() => {
       component.onBlur();
       expect(component.showDropDown).toBeFalsy();
+    }));
+
+  it('should select the next item int he data array on #onKeyUp() with down arrow event',
+    async(() => {
+      var e = { keyCode: 40 }; // 40 is arrow down
+
+      component.onKeyUp(e as KeyboardEvent);
+      expect(component.selectedIndex).toBe(0);
+
+      component.onKeyUp(e as KeyboardEvent);
+      expect(component.selectedIndex).toBe(1);
     }));
 })
