@@ -12,10 +12,17 @@
     <form [formGroup]="form">
       <ng6-combo-box [data]="dataList"
                      [propertyName]="'name'"
+                     (selectItem)="onSelected($event)"
+                     (textChange)="onTextChange($event)"
+                     (ngModelChange)="onModelChange($event)"
                      formControlName="d"></ng6-combo-box>
     </form>
     <code>
-     Model: {{model | json}}
+      Model: {{model | json}}
     </code>
+    <div>
+      <h5>Event Log</h5>
+      <div *ngFor="let log of eventLogs">{{log}}</div>
+    </div>
   </div>
 </div>

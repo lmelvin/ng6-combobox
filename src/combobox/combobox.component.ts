@@ -1,4 +1,4 @@
-import { Component, Input } from "@angular/core";
+import { Component, EventEmitter, Input, Output } from "@angular/core";
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from "@angular/forms";
 
 export enum KEY_CODE {
@@ -23,6 +23,9 @@ export class Ng6ComboBoxComponent implements ControlValueAccessor {
   @Input("data") dataList: Object[];
   @Input() propertyName: string;
   @Input() buttonClass: string;
+
+  @Output() selectItem: EventEmitter<any> = new EventEmitter();
+  @Output() textChange: EventEmitter<any> = new EventEmitter();
 
   onChange = (_: any) => { };
   onTouched = () => { };
@@ -57,12 +60,14 @@ export class Ng6ComboBoxComponent implements ControlValueAccessor {
     this.selectedIndex = index;
     this.setValue(val);
     this.showDropDown = false;
+    this.selectItem.emit(val);
   }
 
   onTextChange(val: any): void {
     this.selectedIndex = -1;
     this.showDropDown = true;
     this.setValue(val);
+    this.textChange.emit(val);
   }
 
   onBlur() {

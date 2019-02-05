@@ -12,6 +12,7 @@ export class ComboBoxComponent implements OnInit {
   dataList = [
     { name: "John" }, { name: "Sally" }, { name: "Frank" }
   ];
+  eventLogs: string[] = [];
 
   constructor(private fb: FormBuilder) { }
 
@@ -23,5 +24,17 @@ export class ComboBoxComponent implements OnInit {
 
   get model(): any {
     return this.form.controls["d"].value;
+  }
+
+  onModelChange(value: any) {
+    this.eventLogs.push(`Model Changed: ${value}`);
+  }
+
+  onTextChange(value: any) {
+    this.eventLogs.push(`Text changed: ${value}`);
+  }
+
+  onSelected(value: any) {
+    this.eventLogs.push(`Selection made: ${value}`);
   }
 }
