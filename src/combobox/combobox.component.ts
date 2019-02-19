@@ -23,6 +23,7 @@ export class Ng6ComboBoxComponent implements ControlValueAccessor {
   @Input("data") dataList: Object[];
   @Input() propertyName: string;
   @Input() buttonClass: string;
+  @Input() placeholder: string;
 
   @Output() selectItem: EventEmitter<any> = new EventEmitter();
   @Output() textChange: EventEmitter<any> = new EventEmitter();
