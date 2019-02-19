@@ -15,7 +15,8 @@
                      (selectItem)="onSelected($event)"
                      (textChange)="onTextChange($event)"
                      (ngModelChange)="onModelChange($event)"
-                     formControlName="d"></ng6-combo-box>
+                     formControlName="d"
+                     [placeholder]="'foo bar'"></ng6-combo-box>
     </form>
     <code>
       Model: {{model | json}}
