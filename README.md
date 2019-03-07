@@ -1,4 +1,4 @@
-# Ng6Combobox
+# ng6-combobox
 
 A simple combobox component built for Angular 6 reactive forms and Bootstrap 4
 
