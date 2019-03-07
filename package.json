@@ -12,7 +12,7 @@
     "start": "ng serve",
     "start-demo": "ng serve demo",
     "build": "ng build",
-    "build-demo": "ng build demo",
+    "build:demo": "ng build demo",
     "build:package": "ng-packagr -p src/package.json",
     "test": "ng test",
     "lint": "ng lint",
