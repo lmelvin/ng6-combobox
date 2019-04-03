@@ -2,7 +2,19 @@
 
 A simple combobox component built for Angular 6 reactive forms and Bootstrap 4
 
+#### Installation
 `npm install ng6-combobox`
+
+In your ngModule
+```html
+import { Ng6Module } from 'ng6-combobox';
+```
+```html
+@NgModule({  
+  imports: [    
+    Ng6Module
+})
+```
 
 #### Selector
 `ng6-combo-box`
